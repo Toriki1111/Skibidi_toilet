@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ - Cửa Hàng SKIBIDI</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #35424a;
+            color: #ffffff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .header-title-tech {
+            font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+            font-size: 3rem;
+            font-weight: 800;
+            color: #4c94dc;
+            letter-spacing: 2px;
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 8px rgba(25, 118, 210, 0.08);
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        .header-title-tech::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 0;
+            height: 0;
+            background: radial-gradient(circle, #4fc3f7 60%, transparent 100%);
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            opacity: 0.7;
+            transition: width 0.5s cubic-bezier(.4,2,.6,1), height 0.5s cubic-bezier(.4,2,.6,1);
+            z-index: 0;
+        }
+        .header-title-tech:hover::before {
+            width: 120%;
+            height: 300%;
+        }
+        .header-title-tech:hover {
+            color: #fff;
+            transition: color 0.3s;
+        }
+        .header-title-tech span {
+            position: relative;
+            z-index: 1;
+        }
+        nav {
+            margin: 20px 0;
+        }
+        .nav-menu {
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            padding: 0;
+            margin: 0 0 20px 0;
+        }
+        .nav-menu li {
+            flex: 1;
+            text-align: center;
+        }
+        .nav-menu a {
+            display: block;
+            padding: 12px 0;
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: bold;
+            transition: background 0.2s, color 0.2s, border 0.2s;
+            border: 2px solid #7c3aed;
+            border-radius: 16px;
+            margin: 0 8px;
+            background: #4fc3f7;
+        }
+        .nav-menu a:hover {
+            background: #7c3aed;
+            color: #fff;
+            border-color: #2d8cf0;
+        }
+        main section, main article {
+            background: #fff;
+            border: 2px solid #7c3aed;
+            border-radius: 18px;
+            padding: 24px 20px;
+            margin: 24px auto;
+            box-shadow: 0 2px 8px rgba(124, 58, 237, 0.08);
+            max-width: 700px;
+        }
+        .product-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .product {
+            border: 2px solid #7c3aed;
+            border-radius: 18px;
+            padding: 20px;
+            margin: 10px;
+            background: #ffffff;
+            width: 300px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        .product img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+        }
+        .product h2 {
+            margin: 10px 0;
+        }
+        .product p {
+            color: #333;
+        }
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .contact-form input,
+        .contact-form textarea {
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #7c3aed;
+            font-size: 1rem;
+        }
+        .contact-form button {
+            background: #7c3aed;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 10px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .contact-form button:hover {
+            background: #4fc3f7;
+            color: #35424a;
+        }
+        footer {
+            background: #35424a;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        @media (max-width: 900px) {
+            .product-list {
+                flex-direction: column;
+                align-items: center;
+            }
+            .product {
+                width: 90%;
+            }
+            .nav-menu {
+                flex-direction: column;
+            }
+            .nav-menu li {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="header-title-tech"><span>Chào mừng đến với cửa hàng SKIBIDI</span></h1>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="#trangchu">Trang chủ</a></li>
+                <li><a href="#sanpham">Sản phẩm</a></li>
+                <li><a href="#lienhe">Liên hệ</a></li>
+                <li><a href="#thongtin">Thông tin cửa hàng</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Trang chủ -->
+        <section id="trangchu">
+            <h2>Sản phẩm nổi bật</h2>
+            <p>Khám phá các sản phẩm và ưu đãi mới nhất của chúng tôi!</p>
+        </section>
+        <!-- Sản phẩm -->
+        <section id="sanpham">
+            <h2>Sản phẩm của chúng tôi</h2>
+            <div class="product-list">
+                <article class="product">
+                    <img src="https://via.placeholder.com/300x300?text=Toilet+Golden" alt="Sản phẩm 1">
+                    <h2>Sản phẩm 1</h2>
+                    <p>Mô tả sản phẩm 1.</p>
+                    <p>Giá: 100.000.000 USD</p>
+                </article>
+                <article class="product">
+                    <img src="https://via.placeholder.com/300x300?text=Toilet+Gun" alt="Sản phẩm 2">
+                    <h2>Sản phẩm 2</h2>
+                    <p>Mô tả sản phẩm 2.</p>
+                    <p>Giá: 500.000.000 VNĐ</p>
+                </article>
+                <article class="product">
+                    <img src="https://via.placeholder.com/300x300?text=Toilet+1" alt="Sản phẩm 3">
+                    <h2>Sản phẩm 3</h2>
+                    <p>Mô tả sản phẩm 3.</p>
+                    <p>Giá: 10.000.000 VNĐ</p>
+                </article>
+            </div>
+        </section>
+        <!-- Liên hệ -->
+        <section id="lienhe">
+            <h2>Liên hệ</h2>
+            <form class="contact-form">
+                <label for="name">Họ và tên:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Nội dung:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Gửi tin nhắn</button>
+            </form>
+            <div style="margin-top:20px;">
+                <h3>Thông tin liên hệ</h3>
+                <p>Email: support@skibidi.com</p>
+                <p>Điện thoại: 0123 456 789</p>
+            </div>
+        </section>
+        <!-- Thông tin cửa hàng -->
+        <section id="thongtin">
+            <h2>Thông tin cửa hàng</h2>
+            <p><strong>Người bán:</strong> 2351010161_THP</p>
+            <p><strong>Địa chỉ:</strong> 123 Đường Mua Sắm, Thành phố Thương Mại, Việt Nam</p>
+            <p><strong>Giờ hoạt động:</strong></p>
+            <ul>
+                <li>Thứ 2 - Thứ 6: 9h00 - 21h00</li>
+                <li>Thứ 7: 10h00 - 20h00</li>
+                <li>Chủ nhật: Nghỉ</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Cửa Hàng SKIBIDI. Đã đăng ký bản quyền.</p>
+    </footer>
+    <script>
+        // Hiệu ứng cuộn mượt khi click menu
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href.startsWith('#')) {
+                    e.preventDefault();
+                    document.querySelector(href).scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
